@@ -5,4 +5,6 @@ The tutorial is using a tech stack I'm not familiar with so I decided to follow 
 
 You can mess around with the [spotify api console](https://developer.spotify.com/documentation/web-api/reference/) to test the api end points.
 
-Spotipy [docs](https://spotipy.readthedocs.io/en/latest/)
+Spotipy [docs](https://spotipy.readthedocs.io/en/latest/).
+
+Spotify kaggel [dataset](https://www.kaggle.com/ehcall/spotify-artists).
