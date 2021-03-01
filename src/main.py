@@ -2,7 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
 
-if __name__ == '__main__':
+def spotipy_example():
     cid = os.environ['SPOTIFY_CID']
     secret = os.environ['SPOTIFY_SECRET']
     print(cid)
@@ -24,3 +24,19 @@ if __name__ == '__main__':
             popularity.append(t['popularity'])
     
     print(artist_name)
+
+def parse_artists_from_csv(csv_path):
+    artists = []
+    with open(csv_path) as fp:
+        line = fp.readline()
+        while line:
+            artist = {}
+            artist['id'] = line.split(',')[-1]
+            artist['name'] = line[0:-len(artist['id'])-1]
+            artists.append(artist)
+            line = fp.readline()
+    return artists
+
+if __name__ == '__main__':
+    artists = parse_artists_from_csv('artist_uris_reduced.csv')
+    print(artists[:5])
