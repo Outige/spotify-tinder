@@ -1,5 +1,7 @@
 # custom
 run.sh
+artist_uris.csv
+artist_uris_reduced.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
